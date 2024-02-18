@@ -18,7 +18,7 @@ public class Employer extends AbstractEntity {
 
     @OneToMany
     @JoinColumn(name = "employer_id")
-    private List<Job> jobs = new ArrayList<>();
+    private List<Job> jobs = new ArrayList<>(); //will represent a list of all items in a given job
 
     //no-arg constructor needed for hibernate to create an object
     public Employer() {

@@ -1,6 +1,7 @@
 package org.launchcode.techjobs.persistent.controllers;
 
 import jakarta.validation.Valid;
+import org.launchcode.techjobs.persistent.models.Employer;
 import org.launchcode.techjobs.persistent.models.Job;
 import org.launchcode.techjobs.persistent.models.data.EmployerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +48,15 @@ public class HomeController {
             return "add";
         }
 
+        Optional<Employer> optEmployer = employerRepository.findById(employerId);
+
+        if (optEmployer.isPresent()) {
+            Employer employer = (Employer) optEmployer.get();
+
+        } else {
+            return "redirect:";
+        }
+
         return "redirect:";
     }
 
@@ -57,3 +67,11 @@ public class HomeController {
     }
 
 }
+//Optional<Employer> optEmployer = employerRepository.findById(employerId);
+//        if (optEmployer.isPresent()) {
+//            Employer employer = (Employer) optEmployer.get();
+//            model.addAttribute("employer", employer);
+//            return "employers/view";
+//        } else {
+//            return "redirect:../";
+//        }
