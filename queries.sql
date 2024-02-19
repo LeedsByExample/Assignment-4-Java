@@ -16,4 +16,4 @@ ORDER BY name ASC;
 --write a query to return the names of all skills that are attached
 --to jobs in alphabetical order. If a skill does not have a job listed
 --it should not be included in the results of this query.
-\
+
