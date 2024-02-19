@@ -16,7 +16,7 @@ public class Skill extends AbstractEntity {
     @Size(max = 150)
     private String description;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "skills")
     private List<Job> jobs = new ArrayList<>();
 
     //no-arg constructor for Hibernate to create an object
